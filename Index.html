@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>香軟小蛋糕Sandy的主頁</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F4E3; /* 奶油色背景 */
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .animated-section {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        .bouncing-element {
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .link-button {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .link-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* 手機 RWD */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            .title {
+                font-size: 2.5rem;
+            }
+            .subtitle {
+                font-size: 1.125rem;
+            }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+
+    <div class="container mx-auto p-8 text-center">
+
+        <!-- 頂部區塊 -->
+        <div class="animated-section">
+            <h1 class="title text-4xl sm:text-5xl font-bold text-[#E98074] mb-4">
+                香軟小蛋糕Sandy的主頁 🍰
+            </h1>
+            <p class="subtitle text-lg sm:text-xl text-gray-700 mb-8">
+                嗨，我是香香軟軟的小蛋糕 Sandy！我熱愛美食，也喜歡用程式和設計創造樂趣。
+            </p>
+        </div>
+
+        <!-- 主視覺與動態效果 -->
+        <div class="my-12 animated-section bouncing-element">
+            <img src="https://placehold.co/150x150/FFC0CB/000?text=CAKE" alt="小蛋糕Sandy插圖" class="mx-auto rounded-full shadow-lg">
+        </div>
+
+        <!-- 連結按鈕區塊 -->
+        <div class="animated-section space-y-4">
+            <a href="https://github.com/您的用戶名" target="_blank" class="link-button block w-full bg-[#FFD166] text-white py-4 rounded-lg font-bold text-lg shadow-md hover:bg-[#F2C044]">
+                GitHub
+            </a>
+            <a href="mailto:您的郵件地址" class="link-button block w-full bg-[#A8D8EA] text-white py-4 rounded-lg font-bold text-lg shadow-md hover:bg-[#92B8C6]">
+                Email
+            </a>
+            <a href="https://linkedin.com/in/您的用戶名" target="_blank" class="link-button block w-full bg-[#FF6B6B] text-white py-4 rounded-lg font-bold text-lg shadow-md hover:bg-[#E95C5C]">
+                LinkedIn
+            </a>
+            <a href="https://instagram.com/您的用戶名" target="_blank" class="link-button block w-full bg-[#C7C7F3] text-white py-4 rounded-lg font-bold text-lg shadow-md hover:bg-[#B7B7D8]">
+                Instagram
+            </a>
+        </div>
+
+    </div>
+</body>
+</html>
